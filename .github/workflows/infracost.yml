@@ -96,7 +96,7 @@ jobs:
       # If you use private modules, or store Terraform variables or modules in a 3rd party
       # such as TFC or Spacelift, include the same steps/variables as the infracost-pull-request-checks job
       name: Infracost Default Branch Update
-      if: github.event_name == 'push' && (github.ref_name == 'main' || github.ref_name == 'master')
+      if: github.event_name == 'push' && (github.ref_name == 'main' || github.ref_name == 'master' || github.ref_name == 'trunk')
       runs-on: ubuntu-latest
       steps:
         - name: Setup Infracost
